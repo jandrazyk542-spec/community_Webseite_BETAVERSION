@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community & Austausch</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #065fd4;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #065fd4;
+    }
+
+    .community-section {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .community-section a {
+      color: #065fd4;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .youtube-profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .youtube-profile img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    footer {
+      background-color: #065fd4;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Popup Styles */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      z-index: 1000;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .popup button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #065fd4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 900;
+    }
+
+    button.show-popup {
+      padding: 0.5rem 1rem;
+      background-color: #065fd4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .share-buttons {
+      margin-top: 1rem;
+    }
+
+    .share-buttons button {
+      margin: 0.3rem;
+      padding: 0.4rem 0.8rem;
+      background-color: #065fd4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Willkommen zur Community & Austausch</h1>
+</header>
+
+<main>
+  <div class="community-section">
+    <div class="youtube-profile">
+      <img src="https://yt3.googleusercontent.com/ytc/AGIKgqPZkI4uT3RC0h3EXAMPLE=s88-c-k-c0x00ffffff-no-rj" alt="Profilbild">
+      <a href="https://www.youtube.com/@Jascho_originalVersion2" target="_blank">
+        @Jascho_originalVersion2
+      </a>
+    </div>
+
+    <p>Weitere Informationen:</p>
+    <p>
+      Kanal-URL: 
+      <a href="https://www.youtube.com/@Jascho_originalVersion2" target="_blank">
+        www.youtube.com/@Jascho_originalVersion2
+      </a>
+    </p>
+    <p>Beigetreten am: 23.10.2025</p>
+
+    <div class="share-buttons">
+      <p>Teile den Kanal:</p>
+      <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.youtube.com/@Jascho_originalVersion2','_blank')">Facebook</button>
+      <button onclick="window.open('https://twitter.com/intent/tweet?url=https://www.youtube.com/@Jascho_originalVersion2','_blank')">Twitter</button>
+      <button onclick="navigator.clipboard.writeText('https://www.youtube.com/@Jascho_originalVersion2') && alert('Link kopiert!')">Link kopieren</button>
+    </div>
+
+    <button class="show-popup">Mehr Info</button>
+  </div>
+</main>
+
+<!-- Popup -->
+<div class="overlay"></div>
+<div class="popup">
+  <h2>Community Popup</h2>
+  <p>Hier kannst du dich über Neuigkeiten, Events und Austauschmöglichkeiten informieren.</p>
+  <button class="close-popup">Schließen</button>
+</div>
+
+<footer>
+  &copy; 2025 Deine Community. Alle Rechte vorbehalten.
+</footer>
+
+<script>
+  const showBtn = document.querySelector('.show-popup');
+  const popup = document.querySelector('.popup');
+  const closeBtn = document.querySelector('.close-popup');
+  const overlay = document.querySelector('.overlay');
+
+  showBtn.addEventListener('click', () => {
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+  });
+
+  overlay.addEventListener('click', () => {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
