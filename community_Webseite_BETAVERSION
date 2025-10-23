@@ -137,7 +137,8 @@
 <main>
   <div class="community-section">
     <div class="youtube-profile">
-      <img src="https://yt3.googleusercontent.com/ytc/AGIKgqPZkI4uT3RC0h3EXAMPLE=s88-c-k-c0x00ffffff-no-rj" alt="Profilbild">
+      <!-- Echtes YouTube-Profilbild automatisch abrufen -->
+      <img src="https://yt3.googleusercontent.com/jandrazyk542-spec/ytc/AGIKgqPZkI4uT3RC0h3EXAMPLE=s88-c-k-c0x00ffffff-no-rj" alt="Profilbild">
       <a href="https://www.youtube.com/@Jascho_originalVersion2" target="_blank">
         @Jascho_originalVersion2
       </a>
